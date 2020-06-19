@@ -1,0 +1,23 @@
+<div class="repository-add-form-container">
+    <form [formGroup]='repositoryAddFormGroup' (ngSubmit)='onSubmit()'>
+        <div class="repository-add-form-row">
+            <app-form-input type='text' formControlName='name' label="{{'COMMON.NAME'|translate}}"
+                placeholder="{{'COMMON.ADD_NAME'|translate}}">
+            </app-form-input>
+        </div>
+        <div class="repository-add-form-row">
+            <app-form-input type='text' formControlName='description' label="{{'COMMON.DESCRIPTION'|translate}}"
+                placeholder="{{'COMMON.ADD_DESCRIPTION'|translate}}">
+            </app-form-input>
+        </div>
+        <div *ngFor="let visibilityType of visibilityTypes" class="repository-add-form-row">
+            <label>
+                <input type="radio" formControlName="visibility" name="visibility" [value]="visibilityType" />
+                {{('REPOSITORY.VISIBILITY.')+visibilityType|translate}}
+            </label>
+        </div>
+        <div class="repository-add-form-row">
+            <app-submit-button text="{{'COMMON.ADD'|translate}}"></app-submit-button>
+        </div>
+    </form>
+</div>

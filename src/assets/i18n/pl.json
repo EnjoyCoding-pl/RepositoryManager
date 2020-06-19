@@ -1,0 +1,35 @@
+{
+    "COMMON": {
+        "ADD": "Dodaj",
+        "EDIT": "Edytuj",
+        "DELETE": "Usuń",
+        "NAME": "Nazwa",
+        "DESCRIPTION": "Opis",
+        "ADD_NAME": "Wprowaź nazwę",
+        "ADD_DESCRIPTION": "Wprowadź opis",
+        "NEXT":"Następne",
+        "PREVIOUS":"Poprzednie"
+    },
+    "PROJECT": {
+        "TITLE": "Projekty",
+        "ADDED": "Dodano projekt",
+        "DELETED": "Usunięto projekt",
+        "EDITED": "Zaktualizowano projekt"
+    },
+    "REPOSITORY": {
+        "TITLE": "Repozytoria",
+        "ADDED": "Dodano repozytorium",
+        "EDITED": "Zaktualizowano projekt",
+        "VISIBILITY": {
+            "PUBLIC": "Publiczne",
+            "INTERNAL": "Wewnętrzne",
+            "PRIVATE": "Prywatne"
+        }
+    },
+    "ACCOUNT": {
+        "LOGIN": "Zaloguj",
+        "TOKEN": "Token",
+        "ADD_TOKEN": "Wprowadź token",
+        "LOGOUT": "Wyloguj"
+    }
+}

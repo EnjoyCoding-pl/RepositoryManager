@@ -1,0 +1,12 @@
+div.repository-add-form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+div.repository-add-form-row{
+    flex:1;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}

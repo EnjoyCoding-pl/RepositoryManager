@@ -1,0 +1,19 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+div.repository-list-item{
+    display: flex;
+    flex-direction: column;
+    border-left: solid lightgray 5px;
+    margin:10px 0;
+    padding: 5px;
+}
+div.repository-list-item-title{
+    font-weight: bold;
+    font-size: 18px;
+}
+div.repository-list-item-description{
+    font-size: 14px;
+    margin: 5px;
+}

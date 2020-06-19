@@ -1,0 +1,13 @@
+div.project-add-form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+div.project-add-form-row{
+    flex:1;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}

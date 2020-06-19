@@ -1,0 +1,12 @@
+
+<app-alert></app-alert>
+<div class="main-container">
+    <nav *ngIf="isLogged">
+        <ul>
+            <li><a routerLinkActive="active" routerLink="/repository">{{'REPOSITORY.TITLE'|translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/project">{{'PROJECT.TITLE'|translate}}</a></li>
+            <li><a (click)='logout()'>{{'ACCOUNT.LOGOUT'|translate}}</a></li>
+        </ul>
+    </nav>
+    <router-outlet></router-outlet>
+</div>

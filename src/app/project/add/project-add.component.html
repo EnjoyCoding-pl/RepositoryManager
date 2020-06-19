@@ -1,0 +1,23 @@
+<div class="project-edit-form-container">
+    <form [formGroup]="projectAddFormGroup" (ngSubmit)="onSubmit()">
+        <div class="project-add-form-row">
+            <app-form-input type='text' formControlName='name' label="{{'COMMON.NAME'|translate}}" placeholder="{{'COMMON.ADD_NAME'|translate}}">
+            </app-form-input>
+        </div>
+        <div class="project-add-form-row">
+            <app-form-input type='text' formControlName='description' label="{{'COMMON.DESCRIPTION'|translate}}" placeholder="{{'COMMON.ADD_DESCRIPTION'|translate}}">
+            </app-form-input>
+        </div>
+        <div class="project-add-form-row"
+            *ngFor="let repo of projectAddFormGroup.controls.repositoryIds['controls']; let i=index">
+            <label formArrayName="repositoryIds">
+                <input type="checkbox" [formControlName]="i" />
+                {{repositories[i].name}}
+            </label>
+        </div>
+        <div>
+            <app-text-button (click)="onClickNextPage()" *ngIf='hasNextPage' text="{{'COMMON.NEXT'|translate}}"></app-text-button>
+        </div>
+        <app-submit-button text="{{'COMMON.ADD'|translate}}"></app-submit-button>
+    </form>
+</div>

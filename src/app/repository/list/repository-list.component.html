@@ -1,0 +1,19 @@
+<div class="repository-list-container">
+    <app-text-button [route]="['repository','add']" text="{{'COMMON.ADD'|translate}}"></app-text-button>
+    <div *ngFor="let repo of repositories" class="repository-list-item">
+        <div class="repository-list-item-title">
+            <span>{{repo.name}}</span>
+            <span *ngIf="repo.isPrivate">&nbsp;({{'REPOSITORY.VISIBILITY.PRIVATE'|translate}})</span>
+        </div>
+        <div class="repository-list-item-description">
+            {{repo.description}}
+        </div>
+        <div class="repository-list-item-action">
+            <app-text-button [route]="['repository','edit',repo.name]" text="{{'COMMON.EDIT'|translate}}"></app-text-button>
+        </div>
+    </div>
+    <div>
+        <app-text-button (click)="onClickPreviousPage()" *ngIf='hasPreviousPage' text="{{'COMMON.PREVIOUS'|translate}}"></app-text-button>
+        <app-text-button (click)="onClickNextPage()" *ngIf='hasNextPage' text="{{'COMMON.NEXT'|translate}}"></app-text-button>
+    </div>
+</div>

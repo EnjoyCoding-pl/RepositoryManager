@@ -1,0 +1,19 @@
+div.alert-container{
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    padding: 10px 15px;
+    max-width: 350px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
+    color: white;
+}
+
+div.alert-success{
+    background-color: #469600;
+}
+
+div.alert-error{
+    background-color: #B8320D;
+}

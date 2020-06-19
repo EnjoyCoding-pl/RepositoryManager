@@ -1,0 +1,12 @@
+a.text-button{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 14px;
+    color: black;
+    margin: 5px;
+}
+
+a.text-button:hover{
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+<div class="login-form-container">
+    <form [formGroup]='loginForm' (ngSubmit)='onSubmit()'>
+        <div class="login-form-row">
+            <app-form-input type='password' formControlName='token' placeholder="{{'ACCOUNT.ADD_TOKEN'|translate}}" label="{{'ACCOUNT.TOKEN'|translate}}">
+            </app-form-input>
+        </div>
+        <div class="login-form-row">
+            <app-submit-button text="{{'ACCOUNT.LOGIN'|translate}}"></app-submit-button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+<div class="project-list-container">
+    <app-text-button [route]="['project','add']" text="{{'COMMON.ADD'|translate}}"></app-text-button>
+    <div *ngFor="let project of projects" class="project-list-item">
+        <div class="project-list-item-title">
+            <span>{{project.name}}</span>
+        </div>
+        <div class="project-list-item-description">
+            {{project.body}}
+        </div>
+        <div class="project-list-item-action">
+            <app-text-button [route]="['project','edit', project.number]" text="{{'COMMON.EDIT'|translate}}"></app-text-button>
+            <app-text-button (click)="onDelete(project)" text="{{'COMMON.DELETE'|translate}}"></app-text-button>
+        </div>
+    </div>
+    <div>
+        <app-text-button (click)="onClickPreviousPage()" *ngIf='hasPreviousPage' text="{{'COMMON.PREVIOUS'|translate}}"></app-text-button>
+        <app-text-button (click)="onClickNextPage()" *ngIf='hasNextPage' text="{{'COMMON.NEXT'|translate}}"></app-text-button>
+    </div>
+</div>
