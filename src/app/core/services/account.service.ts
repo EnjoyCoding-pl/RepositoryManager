@@ -12,9 +12,7 @@ query getLoggedUserIdQuery{
       }
 }`;
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export default class AccountService {
 
     private userId: Subject<number> = new Subject<number>();

@@ -4,7 +4,6 @@ import { Repository } from 'src/app/core/models/repository.model';
 import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'app-repository-list',
     templateUrl: './repository-list.component.html',
     styleUrls: ['./repository-list.component.css'],
 })

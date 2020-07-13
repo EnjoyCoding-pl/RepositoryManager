@@ -70,7 +70,7 @@ mutation updateRepository($repository: UpdateRepositoryInput!){
 }
 `;
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export default class RepositoryService {
 
   private repositories: Subject<List<Repository>> = new Subject<List<Repository>>();

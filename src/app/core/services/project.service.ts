@@ -75,7 +75,7 @@ const DELETE_PROJECT_MUTATION = graphql`
   }`;
 
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export default class ProjectService {
 
   private project: Subject<Project> = new Subject<Project>();
