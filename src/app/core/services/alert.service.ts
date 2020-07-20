@@ -4,38 +4,38 @@ import Alert from '../models/alert.model';
 import { AlertType } from "../models/alert-type.enum";
 import { filter } from 'rxjs/operators';
 
+const ALERT_ID = "DEFAULT";
+
 @Injectable({ providedIn: 'root' })
 export default class AlertService {
 
     private alertSubject: Subject<Alert> = new Subject<Alert>();
-    private defaultId: string = "default-alert";
 
-    onAlert(id = this.defaultId) {
-        return this.alertSubject.asObservable().pipe(filter(x => x && x.id === id));
+    onAlert() {
+        return this.alertSubject.asObservable();
     }
-    
-    success(message: string, id = this.defaultId) {
+
+    success(message: string) {
         this.alert(new Alert({
-            id: id,
+            id: ALERT_ID,
             message: message,
             type: AlertType.SUCCESS
         }))
     }
-    
-    error(message: string, id = this.defaultId) {
+
+    error(message: string) {
         this.alert(new Alert({
-            id: id,
+            id: ALERT_ID,
             message: message,
             type: AlertType.ERROR
         }));
     }
-    
+
     alert(alertMessage: Alert) {
-        alertMessage.id = alertMessage.id || this.defaultId;
         this.alertSubject.next(alertMessage);
     }
 
-    clear(id = this.defaultId) {
-        this.alertSubject.next(new Alert({ id }));
+    clear() {
+        this.alertSubject.next(new Alert({ id: ALERT_ID }));
     }
 }

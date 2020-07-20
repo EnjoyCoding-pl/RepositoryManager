@@ -16,8 +16,6 @@ import { AlertType } from "src/app/core/models/alert-type.enum";
 })
 export default class AlertComponent implements OnInit, OnDestroy {
 
-    @Input() id = "default-alert";
-
     private alertSubscription: Subscription;
     private routeSubscription: Subscription;
 
@@ -26,7 +24,7 @@ export default class AlertComponent implements OnInit, OnDestroy {
     constructor(private alertService: AlertService, private router: Router) { }
 
     ngOnInit(): void {
-        this.alertSubscription = this.alertService.onAlert(this.id).subscribe(alert => {
+        this.alertSubscription = this.alertService.onAlert().subscribe(alert => {
             if (!alert.message) {
                 this.alerts = [];
             } else {
@@ -36,7 +34,7 @@ export default class AlertComponent implements OnInit, OnDestroy {
 
         this.routeSubscription = this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
-                this.alertService.clear(this.id);
+                this.alertService.clear();
             }
         })
     }
