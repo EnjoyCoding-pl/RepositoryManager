@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import Alert from '../models/alert.model';
 import { AlertType } from "../models/alert-type.enum";
-import { filter } from 'rxjs/operators';
 
 const ALERT_ID = "DEFAULT";
 

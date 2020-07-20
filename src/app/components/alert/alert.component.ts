@@ -5,7 +5,6 @@ import { Router, NavigationStart } from '@angular/router';
 import Alert from 'src/app/core/models/alert.model';
 import { AlertType } from "src/app/core/models/alert-type.enum";
 
-
 @Component({
     template: `
     <div *ngFor='let alert of alerts' (click)='onClickAlert(alert)' class='{{cssClass(alert)}}'>
